@@ -20,7 +20,7 @@ func ReadText(text string, delim byte) iter.Seq[string] {
 	}
 }
 
-func ReadFile(path string, delim byte) iter.Seq[string] {
+func ReadFileWithDelim(path string, delim byte) iter.Seq[string] {
 	return func(yield func(string) bool) {
 		f, err := os.Open(path)
 

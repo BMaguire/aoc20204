@@ -1,8 +1,7 @@
-use std::fs;
 
-mod util;
+use util;
 
-static DATA_PATH: &str = "../assets";
+static DATA_PATH: &str = "../inputs";
 
 fn main() {
     
