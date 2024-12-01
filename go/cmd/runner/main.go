@@ -18,6 +18,7 @@ func main() {
 
 	if *wordPtr == "*" {
 
+		runner.Run(day01.Day01)
 	} else {
 		runner.Run(day01.Day01)
 

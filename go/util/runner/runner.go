@@ -6,8 +6,8 @@ import "fmt"
 
 type Solution interface {
 	Parse(string)
-	Part1()
-	Part2()
+	Part1() int
+	Part2() int
 }
 
 type DayRunner struct {
@@ -15,18 +15,19 @@ type DayRunner struct {
 	Solution Solution
 }
 
-func (c *DayRunner) setSolution(s Solution) {
-	c.Solution = s
-}
-
-const SOLUTION_PATH = "../assets/"
+const SOLUTION_PATH = "../inputs/"
 
 func Run(runner DayRunner) {
+	path := SOLUTION_PATH + "day" + fmt.Sprintf("%02d", runner.Day) + "/input"
+
+	fmt.Printf("Parse input %s \n", path)
 
 	runner.Solution.Parse(SOLUTION_PATH + "day" + fmt.Sprintf("%02d", runner.Day) + "/input")
 
-	runner.Solution.Part1()
+	fmt.Println("Part 1")
+	fmt.Printf("result: %d \n", runner.Solution.Part1())
 
-	runner.Solution.Part2()
+	fmt.Println("Part 2")
+	fmt.Printf("result: %d \n", runner.Solution.Part2())
 
 }
