@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"solution/solutions/day01"
-	_ "solution/solutions/day01"
+
+	"solution/solutions/day02"
 	"solution/util/runner"
 )
 
@@ -16,13 +16,8 @@ func main() {
 
 	fmt.Println("day:", *wordPtr)
 
-	if *wordPtr == "*" {
+	runner.Run(day02.Day02)
 
-		runner.Run(day01.Day01)
-	} else {
-		runner.Run(day01.Day01)
-
-	}
 	/*
 		for line := range util.ReadFile(SOLUTION_PATH+"example/test", '\n') {
 
